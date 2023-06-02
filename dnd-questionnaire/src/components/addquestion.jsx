@@ -15,26 +15,23 @@ const AddQuestion = () => {
         if (answer === "1") {
             //User enters question. Question should fetch from database.
             let newQuestion = prompt("Enter question you want to ask the players.")
-           
-            let options = JSON.stringify({
+            let options = {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body:newQuestion
-            })
-            console.log(options, "this is body!")
-
+                body:JSON.stringify({newQuestion})
+            }
+            // fetch()rs
             fetch('http://localhost:4000/add', options)
-                .then(res => res.json())
+                // .then(res => res.json())
                 .then(data => console.log(data, 'THIS IS DATA'))
             //Correct
         } else {
             alert('Incorrect passphrase!')
             fetch('http://localhost:4000/retrieve')
             .then(data => data.json())
-            .then(data => console.log(data, 'this is DATA')) 
-            .catch(error => console.log(error))
+            .then (data => console.log(data))
 
         }
 
