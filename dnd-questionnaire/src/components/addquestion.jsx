@@ -8,6 +8,8 @@ const AddQuestion = () => {
 //If passphrase matches, ask for new question to go into the bank
 //This input goes into the database
    return (
+
+    //Break this up into separate functions
     <>
     <h1 className='new-Question' onClick={e => {
         //Verify user with passphrase
@@ -31,7 +33,10 @@ const AddQuestion = () => {
             alert('Incorrect passphrase!')
             fetch('http://localhost:4000/retrieve')
             .then(data => data.json())
-            .then (data => console.log(data))
+            .then (data => {
+                console.log(data)
+                console.log(data[0].question)
+            })
 
         }
 

@@ -3,8 +3,9 @@ const app = express();
 const { Client } = require('pg');
 const PORT = process.env.PORT || 4000;
 const cors = require('cors');
+const config = require('./config.js')[process.env.NODE_ENV || "dev"];
 
-const connectionString = 'postgresql://postgres:docker@127.0.0.1:5432/questionaire';
+const connectionString = config.connectionString;
 const client = new Client({
     connectionString: connectionString,
 });
@@ -21,13 +22,14 @@ app.get('/retrieve', (req, res) => {
     // console.log(res, 'response');
 });
 
-app.get('/add', (req, res) => {
-    res.send('hi')
-})
 app.post('/add', (req, res) => {
+        //AnswerSurvey.jsx contains SurveyJSON Element. It is sending the request here to be placed into the databse.
     try {
-        // console.log(req, 'the request')
-        client.query(`INSERT INTO questions (question) VALUES('${req.body.newQuestion}');`)
+        console.log(req.body.HowDoYouPreferThis, 'the request', req.body)
+        let question = Object.keys(req.body)[0]
+        console.log(question)
+        client.query(`INSERT INTO answers (answer) VALUES('${req.body.HowDoYouPreferThis}');`)
+        client.query(`INSERT INTO questions (question) VALUES ('${question}');`)
         // .then(res.send(`Added ${req.body.newQuestion} to database!`))
       } catch (error) {
         console.error(error);

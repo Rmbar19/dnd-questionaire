@@ -5,6 +5,7 @@ import AddQuestion from './components/addquestion';
 import Form from './components/form';
 import AnswerQuestion from './components/answerquestions';
 import Example from './components/test';
+import Questionaire from './components/AnswerSurvey';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <header className="App-header">
         <div className='Add-Question'><AddQuestion></AddQuestion></div>
         {/* <div className ='answer-Question'><Form></Form></div> */}
-        <div className ='answer-Question'><AnswerQuestion></AnswerQuestion></div>
+        <div className ='answer-Question'><Questionaire></Questionaire></div>
         {/* <div className = 'answer-Question'><Example></Example></div> */}
 
       </header>
