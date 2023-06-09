@@ -3,7 +3,7 @@ const app = express();
 const { Client } = require('pg');
 const PORT = process.env.PORT || 5000;
 const cors = require('cors');
-const config = require('../../backend/config.js')[process.env.NODE_ENV || "dev"];
+const config = require('../backend/config.js')[process.env.NODE_ENV || "dev"];
 
 const connectionString = config.connectionString;
 const client = new Client({
