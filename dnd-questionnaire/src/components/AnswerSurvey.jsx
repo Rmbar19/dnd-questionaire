@@ -162,7 +162,7 @@ const surveyJson = {
 
 
 
-const Questionaire = () => {
+const Questionaire = ({displaySurvey, setDisplaySurvey}) => {
 
     const survey = new Model(surveyJson);
     const visiblePageIndex = survey.currentPage
@@ -182,7 +182,7 @@ const Questionaire = () => {
     }, [])
     const surveyComplete = useCallback((sender) => {
         saveSurveyResults(
-           "http://localhost:4000/add",
+           "http://localhost:5000/add",
             sender.data
         )
     }, []);
