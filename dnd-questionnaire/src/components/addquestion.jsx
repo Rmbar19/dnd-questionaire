@@ -9,7 +9,8 @@ const AddQuestion = ({displaySurvey, setDisplaySurvey}) => {
 
     const appender = () => {
     
-        fetch('http://localhost:5000/retrieve')
+        // fetch('http://localhost:5000/retrieve')
+        fetch("https://questionaireapi.onrender.com")
         .then(data => data.json())
         .then (data => {
             console.log(data)
