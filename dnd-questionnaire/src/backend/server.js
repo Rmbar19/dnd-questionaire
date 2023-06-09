@@ -3,7 +3,7 @@ const app = express();
 const { Client } = require('pg');
 const PORT = process.env.PORT || 4000;
 const cors = require('cors');
-const config = require('./config.js')[process.env.NODE_ENV || "dev"];
+const config = require('../../backend/config.js')[process.env.NODE_ENV || "dev"];
 
 const connectionString = config.connectionString;
 const client = new Client({
@@ -15,8 +15,8 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/retrieve', (req, res) => {
-
-    client.query('SELECT * FROM questions')
+    // client.query('SELECT * FROM questions;')
+    client.query('SELECT * FROM answers;')
     .then(result => res.send(result.rows))
 
     // console.log(res, 'response');
@@ -25,12 +25,13 @@ app.get('/retrieve', (req, res) => {
 app.post('/add', (req, res) => {
         //AnswerSurvey.jsx contains SurveyJSON Element. It is sending the request here to be placed into the databse.
     try {
-        console.log(req.body.HowDoYouPreferThis, 'the request', req.body)
-        let question = Object.keys(req.body)[0]
-        console.log(question)
-        client.query(`INSERT INTO answers (answer) VALUES('${req.body.HowDoYouPreferThis}');`)
-        client.query(`INSERT INTO questions (question) VALUES ('${question}');`)
-        // .then(res.send(`Added ${req.body.newQuestion} to database!`))
+
+        console.log('the request', req.body)
+        let answer = Object.values(req.body)
+        console.log(answer, 'answer')
+        answer.forEach(answer => client.query(`INSERT INTO answers (answer) VALUES('${answer}');`))
+        // client.query(`INSERT INTO answers (answer) VALUES('${req.body.HowDoYouPreferThis}');`)
+        // client.query(`INSERT INTO questions (question) VALUES ('${question}');`)
       } catch (error) {
         console.error(error);
         // Expected output: ReferenceError: nonExistentFunction is not defined
