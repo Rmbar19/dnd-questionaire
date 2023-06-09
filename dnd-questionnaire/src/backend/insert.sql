@@ -27,7 +27,7 @@ CREATE TABLE answers (
     answer17 varchar(3000),
     answer18 varchar(3000),
     answer19 varchar(3000),
-    answer20 varchar(3000),
+    answer20 varchar(3000)
 );
 
 
