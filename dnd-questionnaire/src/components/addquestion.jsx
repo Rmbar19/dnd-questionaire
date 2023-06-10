@@ -8,7 +8,7 @@ const AddQuestion = ({displaySurvey, setDisplaySurvey}) => {
     const [questionsAndAnswers, setQuestionsAndAnswers] = useState(<></>)
 
     const appender = () => {
-    
+        console.log('test')
         // fetch('http://localhost:5000/retrieve')
         fetch("https://questionaireapi.onrender.com/retrieve")
         .then(data => data.json())
