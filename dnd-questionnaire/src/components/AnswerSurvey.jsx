@@ -1,4 +1,4 @@
-import '../survey-library/build/survey-react/defaultV2.min.css';
+import './survey-library/build/survey-react/defaultV2.min.css';
 import {useState, react, useCallback} from 'react';
 import { Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
