@@ -38,7 +38,6 @@ const surveyJson = {
     pages:  [{
         elements: [{
             type:'html',
-            html:"<h2 color='black'>This is a 20 question survey for our D&D campaign! Please take a moment to answer for a better experience.</h2>"
         }]
     }, {
         elements: [{
@@ -49,105 +48,105 @@ const surveyJson = {
             name: "Doesyourcharacterbelieveindoingwhateverittakestoachievetheirgoalsevenifitgoesagainsttheirmoralcode?",
             title: "Does your character believe in doing whatever it takes to achieve their goals, even if it goes against their moral code?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Isyourcharacterwillingtocompromisetheirpersonalbeliefsforthebenefitofthegrouporthemission?",
             title: "Is your character willing to compromise their personal beliefs for the benefit of the group or the mission?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Wouldyourcharacterinterveneiftheysawaninnocentpersonindangerevenifitcouldpotentiallyexposethemtodangeraswell?",
             title: "Would your character intervene if they saw an innocent person in danger, even if it could potentially expose them to danger as well?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, ], 
     },  {
         elements: [{
             name: "Doesyourcharacterrespectthelawsandnormsofsocietyeveniftheydisagreewiththemonapersonallevel?",
             title: "Does your character respect the laws and norms of society, even if they disagree with them on a personal level?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Doesyourcharacterbelieveinkarmaortheideathattheiractionshaveconsequencesthatwillcomebacktotheminthefuture?",
             title: "Does your character believe in karma or the idea that their actions have consequences that will come back to them in the future?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Isyourcharacterwillingtotakealifeifnecessary?",
             title: "Is your character willing to take a life if necessary?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Wouldyourcharacterstealfromtherichtogivetothepoor?",
             title: "Would your character steal from the rich to give to the poor?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, ],
     }, {
         elements: [{
             name: "Isyourcharacterlikelytolietoprotectsomeonesfeelingsortoavoidconflict?",
             title: "Is your character likely to lie to protect someone's feelings or to avoid conflict?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Doesyourcharacterbelievethatsomepeopleareinnatelygoodorevilordotheybelievepeopleareshapedbytheirexperiences?",
             title: "Does your character believe that some people are innately good or evil, or do they believe people are shaped by their experiences?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Wouldyourcharacterforgivesomeonewhobetrayedthem?",
             title: "Would your character forgive someone who betrayed them?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Doesyourcharacterbelieveinredemptionandsecondchances?",
             title: "Does your character believe in redemption and second chances?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, ],
     }, {
         elements: [{
             name: "Wouldyourcharacterputtheirownlifeatrisktosaveastranger?",
             title: "Would your character put their own life at risk to save a stranger?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Doesyourcharacterbelievethateveryonedeservestobetreatedwithrespectandkindnessregardlessoftheiractions?",
             title: "Does your character believe that everyone deserves to be treated with respect and kindness, regardless of their actions?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "Isyourcharacterwillingtosacrificetheirownhappinessforthehappinessofothers?",
             title: "Is your character willing to sacrifice their own happiness for the happiness of others?",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "True/False:Yourcharacterbelievesthatendsjustifythemeans",
             title: "True/False: Your character believes that ends justify the means",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, ],
     }, {
         elements: [{
             name: "True/False:Yourcharacterbelievesthateveryoneregardlessoftheiractionsiscapableofredemption.",
             title: "True/False: Your character believes that everyone, regardless of their actions, is capable of redemption.",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "True/False:Yourcharacterwouldbreakthelawiftheybelieveditwastherightthingtodo.",
             title: "True/False: Your character would break the law if they believed it was the right thing to do.",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "True/False:Yourcharacterbelievesinastrictcodeofconductandwillnotdeviatefromit,evenunderduress.",
             title: "True/False: Your character believes in a strict code of conduct and will not deviate from it, even under duress.",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, {
             name: "True/False:Yourcharacterbelievesthatoneshouldalwaysprioritizetheneedsofthemanyovertheneedsofthefewortheone.",
             title: "True/False: Your character believes that one should always prioritize the needs of the many over the needs of the few or the one.",
             type: "text",
-            isRequired: false
+            isRequired: true
         }, ]
     }],
     showQuestionNumbers: "on",
